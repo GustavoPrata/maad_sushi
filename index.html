@@ -20,8 +20,8 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="" class="nav__logo">
-                    <!-- <img src="assets/img/logo.png" alt="logo image"> -->
-                    MAAD SUSHI
+                    <img src="assets/img/logo1.png" alt="logo image">
+                    
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -220,13 +220,18 @@
                                 Envie seu currículo<br>
                                 e entre na equipe.
                             </h2>
-
-                            <form action="" class="newsletter__form">
-                                <input type="email" placeholder="Envie seu curriculo Garçom/nete - Sushi Man" class="newsletter__input">
-
-                                <button class="button newsletter__button">
-                                     <i class="ri-send-plane-line"></i>
-                                </button>
+                            <form action="enviar_curriculo.php" method="post" enctype="multipart/form-data" class="newsletter__form">
+            
+                                <input type="d" name="nome" placeholder="Nome / Sobrenome" class="newsletter__input" required>
+                                <input type="mail" name="email" placeholder="Email" class="newsletter__input" required>
+                                <input type="tell" name="telefone" placeholder="Telefone" class="newsletter__input" required>
+                                <select name="area" class="newsletter__input" required>
+                                    <option value="">Selecione a área</option>
+                                    <option value="garcom">Garçom/Garçonete</option>
+                                    <option value="sushi-man">Sushi Man</option>
+                                </select>
+                                <input type="file" id="curriculo-upload" name="curriculo" class="newsletter__input-file" required>
+                                <button type="submit" class="button newsletter__button" >Enviar Currículo</button>
                             </form>
                         </div>
                     </div>

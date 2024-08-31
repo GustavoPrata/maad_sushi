@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Orbitron:wght@400;500&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -7,19 +7,19 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(19, 64%, 54%);
-  --first-color-alt: hsl(19, 64%, 52%);
-  --title-color: hsl(19, 16%, 15%);
-  --text-color: hsl(19, 16%, 35%);
-  --text-color-light: hsl(19, 8%, 55%);
-  --body-color: hsl(19, 100%, 96%);
-  --container-color: hsl(19, 100%, 97%);
+  --first-color: #D3AD86; /* bege */
+  --first-color-alt: #D6B18B; /* tom de bege ligeiramente mais escuro */
+  --title-color: #000000; /* preto */
+  --text-color: #21201E; /* cinza escuro */
+  --text-color-light: #D3AD86; /* bege claro (ou outra cor clara para contraste) */
+  --body-color: #FEFEFE; /* branco */
+  --container-color: #FEFEFE;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --title-font: "Lora", serif;
-  --subtitle-font: "Dancing Script", cursive;
+  --body-font: "Orbitron", sans-serif;
+  --title-font: "Orbitron", serif;
+  --subtitle-font: "Orbitron", cursive;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -215,7 +215,7 @@ body.dark-theme{
 }
 
 .nav__logo img{
-  width: 26px;
+  width: 250px;
 
 }
 
@@ -240,6 +240,10 @@ body.dark-theme{
     padding-block: 3.5rem;
     transition: top .4s;
 
+  }
+  .nav__logo img{
+    width: 150px;
+  
   }
 }
 
@@ -548,12 +552,11 @@ body.dark-theme{
   transform: rotate(30deg);
 }
 /*=============== NEWSLETTER ===============*/
-.newsletter__container{
+.newsletter__container {
   position: relative;
-
 }
 
-.newsletter__content{
+.newsletter__content {
   position: relative;
   background-color: hsl(19, 24%, 15%);
   border-radius: 2.5rem;
@@ -563,46 +566,59 @@ body.dark-theme{
   margin-bottom: 2rem;
 }
 
-.newsletter__img{
+.newsletter__img {
   width: 250px;
   position: absolute;
   top: -4.5rem;
   left: -8rem;
 }
 
-.newsletter__data .section__title{
+.newsletter__data .section__title {
   color: #fff;
   margin-bottom: 2rem;
-
 }
 
-.newsletter__form{
+.newsletter__form {
   background-color: #fff;
-  padding: 5px 5px 5px 16px;
-  border-radius: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
   display: flex;
-  column-gap: .5rem;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.newletter__input,
-.newsletter__button{
+.newsletter__input,
+.newsletter__button {
   font-family: var(--body-font);
+  text-align: center;
+  display: block;
   border: none;
   outline: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
-.newsletter__input{
-  width: 90%;
+.newsletter__input {
+  background-color: #f5f5f5;
   color: var(--text-color);
-  outline: none;
-  border: none;
+  text-align: center;
 }
 
-.newsletter__button{
+.newsletter__button {
+  background-color: hsl(19, 24%, 25%);
+  color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.newsletter__spinach{
+.newsletter__button:hover {
+  background-color: hsl(19, 24%, 35%);
+}
+
+.newsletter__spinach {
   width: 30px;
   position: absolute;
   right: 2rem;
@@ -612,8 +628,40 @@ body.dark-theme{
 
 .newsletter__container,
 .newsletter__form,
-.newsletter__input{
-  transition: background 0.5s; /* for dark mode animation */
+.newsletter__input {
+  transition: background 0.5s; /* para animação de modo escuro */
+}
+
+.newsletter__input[type="file"] {
+  display: none;
+}
+
+/* Ajuste dos campos de entrada */
+.newsletter__form input[type="text"],
+.newsletter__form select,
+.newsletter__form input[type="tel"] {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+}
+
+.newsletter__form label {
+  width: 100%;
+  text-align: center;
+  display: block;
+  background-color: hsl(19, 24%, 25%);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter__form label:hover {
+  background-color: hsl(19, 24%, 35%);
 }
 /*=============== FOOTER ===============*/
 .footer{
