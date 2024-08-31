@@ -7,13 +7,14 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: #D3AD86; /* bege */
-  --first-color-alt: #D6B18B; /* tom de bege ligeiramente mais escuro */
-  --title-color: #000000; /* preto */
-  --text-color: #21201E; /* cinza escuro */
-  --text-color-light: #D3AD86; /* bege claro (ou outra cor clara para contraste) */
-  --body-color: #FEFEFE; /* branco */
-  --container-color: #FEFEFE;
+
+  --first-color: #D3AD86;
+  --first-color-alt: #D6B18B;
+  --title-color: hsl(19, 16%, 15%);
+  --text-color: hsl(19, 16%, 35%);
+  --text-color-light:#D3AD86;;
+  --body-color: hsl(19, 100%, 96%);
+  --container-color: hsl(19, 100%, 97%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -317,8 +318,9 @@ body.dark-theme{
 }
 
 .home__img{
-  width: 300px;
+  width: 0px;
   justify-self: center;
+  border-radius: 20px;
 }
 
 .home__data{
@@ -416,7 +418,8 @@ body.dark-theme{
 }
 
 .about__img{
-  width: 300px;
+  width: 250px;
+  border-radius: 30px;
   justify-self: center;
 
 }
@@ -993,10 +996,11 @@ font-size: var(--small-font-size);
   }
 
   .home__img{
-    width: 600px;
+    width: 500px;
     position: absolute;
-    top: 5rem;
-    right:-2rem;
+    top: 2rem;
+    right:-1rem;
+    border-radius: 20px;
   }
   .about__container{
     grid-template-columns: 450px 360px;
@@ -1021,7 +1025,8 @@ font-size: var(--small-font-size);
     width: 50px;
   }
   .about__img{
-    width: 450px;
+    width: 500px;
+    border-radius: 20px;
   }
   .popular__container{
     grid-template-columns: repeat(3, 262px);
