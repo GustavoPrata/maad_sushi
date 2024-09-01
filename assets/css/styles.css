@@ -455,6 +455,45 @@ body.dark-theme{
   transform: rotate(-15deg);
 }
 
+/* CSS para estilizar o divisor */
+.divider {
+  position: relative;
+  margin: 20px 0; /* Ajuste a margem conforme necessário */
+  padding: 10px 0; /* Espaço em torno do divisor */
+  text-align: center;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+.divider span {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  background: #fff; /* Cor de fundo do texto */
+  color: #333; /* Cor do texto */
+  font-weight: bold;
+  z-index: 2;
+}
+
+.divider--dashed::before {
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.2));
+  border-top: 1px dashed #333;
+}
+
+.divider--thick::before {
+  height: 3px;
+  background: #333;
+}
 /*=============== gallery ===============*/
 
 .gallery__container {
@@ -487,7 +526,7 @@ body.dark-theme{
 
 .gallery__button {
   position: absolute;
-  top: 50%;
+  top: 35%;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
