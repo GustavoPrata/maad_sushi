@@ -318,7 +318,7 @@ body.dark-theme{
 }
 
 .home__img{
-  width: 0px;
+  width: 300px;
   justify-self: center;
   border-radius: 20px;
 }
